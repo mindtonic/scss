@@ -1,0 +1,250 @@
+/*
+
+  Colors
+  
+*/
+
+$pure-white: #fff;
+$pure-black: #000;
+$white: #efefef;
+$black: #231f20;
+$red: #f25015;
+$rose: #b371a2;
+$yellow: #ffce65;
+$green: #7fbb49; //1ABB9C
+$blue: #52bfd5;
+$purple: #b370a2;
+$light-grey: #ced7e0;
+
+/*
+
+  Breakpoints
+
+*/
+
+// Defining values
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1400px;
+$screen-md-max: ($screen-lg-min - 1);
+
+$small-breakpoint:  100px !default; //640px  !default;
+$medium-breakpoint: 1024px !default;
+$large-breakpoint:  1400px !default;
+$xlarge-breakpoint: 2560px !default;
+$screen: "only screen" !default;
+
+@mixin mobile {
+  @media #{$screen} and (max-width:#{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin mobile-tablet {
+  @media #{$screen} and (max-width:#{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin tablet-and-up {
+  @media #{$screen} and (min-width:#{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media #{$screen} and (min-width:#{$screen-sm-min}) and (max-width:#{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media #{$screen} and (min-width:#{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$screen} and (min-width:#{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin thunderbolt {
+  @media #{$screen} and (min-width:#{$screen-lg-min}) {
+    @content;
+  }
+}
+
+/* 
+
+  Layout
+
+*/
+
+@mixin rounded-corners($radius: 5px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/*
+
+  Text
+
+*/
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-light {
+  font-weight: 100;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-superbold {
+  font-weight: 900;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-red {
+  color: $red;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*
+
+  Position
+ 
+*/
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+/*
+
+  Boxes
+
+*/
+
+.display-none, .prettyprint {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-none {
+  float: none;
+}
+
+.clear {
+  clear: both;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.cover {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  z-index: 1;
+  background: rgba(0,0,0,0.5);
+}
+
+/*
+
+  Lists
+
+*/
+
+ul.not-a-list, ul.not-a-list li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 150%;
+}
+
+/*
+
+  Cursor
+
+*/
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-move {
+  cursor: move;
+}
+
+.cursor-reorder {
+  cursor: ns-resize;
+}
