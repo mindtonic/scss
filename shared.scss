@@ -92,6 +92,18 @@ $screen: "only screen" !default;
 
 /*
 
+  Universal
+
+*/
+
+html, body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+
   Text
 
 */
